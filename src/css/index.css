@@ -1,0 +1,16 @@
+/* 
+* @Author: Marte
+* @Date:   2018-08-17 20:25:50
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-17 22:09:32
+*/
+*{padding:0;margin:0;}
+.fl{float:left;}
+.fr{float:right;}
+li{list-style: none;}
+a{text-decoration:none;}
+.i_regin li{float:left;}
+
+.tools{height: 32px;line-height:32px;font-size:14px;width: 1190px;margin:0 auto;background:#f00;}
+.newlist{display:none;}
+

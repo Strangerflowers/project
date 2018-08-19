@@ -1,0 +1,26 @@
+/* 
+* @Author: Marte
+* @Date:   2018-08-18 11:42:58
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-18 17:52:04
+*/
+
+*{padding:0;margin:0;}
+.fl { float:left; }
+.fr {float:right;}
+.header p{display:inline;}
+.register{width: 952px;margin:0 auto;}
+.header{height: 110px;width: 1190px;}
+.main{width: 100%;height:auto;border:1px solid #ccc;}
+.top{height: 30px;border-bottom:1px solid #ccc;padding:10px 20px;}
+.top p{height: 30px;font-size:14px;line-height:30px;}
+.main_content{width: 759px;padding:50px 0  75px 191px;}
+.main_content input{width: 258px;height: 34px;padding:0 10px 0 30px;vertical-align: middle;font-size:12px;line-height:34px;border-radius:5px;}
+.form-group{margin-bottom: 10px; vertical-align: middle;}
+.form-group span{color:#f00;}
+.agreed{padding-left:100px;}
+.main_content label{display:block;font-size:14px;line-height:34px;width: 100px;height: 34px;color:#333333;float:left;padding-right:0;}
+#checkbox{width: 17px;height: 17px;}
+#btn{width: 300px;height: 36px;background-color: #e6133c;margin-left:100px;border:1px solid #e6133c;border-radius: 5px;}
+/*#code{width: 30px;height: 30px;padding:10px;border:1px solid #ddd;background: #efefef;font-size:30px;}*/
+
