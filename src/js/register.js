@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-18 11:44:58
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-18 18:07:17
+* @Last Modified time: 2018-08-19 15:48:46
 */
 
  document.addEventListener('DOMContentLoaded',()=>{
@@ -56,25 +56,27 @@
                         return false;
                         }
 
-                        // 随机生成验证码
-                 let random  =  document.querySelector('.random');
-                 var code=document.querySelector('#code');
+                 //        // 随机生成验证码
+                 // var random  =  document.querySelector('.random');
+                 // var vcode    =  document.querySelector('#vcode');
 
-                  var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
-                  random.onclick=function(){
-                    randomCode();
-                  }   
-                  randomCode();
+                 //  var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                 //  random.onclick=function(){
+                 //    console.log(666);
+                 //    randomCode();
+                 //  }   
+                 //  randomCode();
 
-                  // 封装函数
-                  function randomCode(){
-                    var _code = '';
-                    for(var i=0;i<4;i++){
-                      var index =parseInt(Math.random()*str.length)
-                      _code +=str[index];
-                    }
-                    code.innerHTML = _code.toUpperCase();
-                  }    
+                 //  // 封装函数
+                 //  function randomCode(){
+                 //    var _code = '';
+                 //    for(var i=0;i<4;i++){
+                 //      var index =parseInt(Math.random()*str.length)
+                 //      _code +=str[index];
+                 //    }
+                 //    vcode.innerHTML = _code.toUpperCase();
+                 //    console.log(vcode);
+                 //  }    
 
 
 
@@ -88,6 +90,32 @@
                 xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xhr.send(`username=${_username}&password=${_password}`);
                 }
+
+
+
+
+                        // 随机生成验证码
+                 var random  =  document.querySelector('.random');
+                 var vcode    =  document.querySelector('#vcode');
+
+                  var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                  random.onclick=function(){
+                    console.log(666);
+                    randomCode();
+                  }   
+                  randomCode();
+
+                  // 封装函数生成随机数字或字母
+                  function randomCode(){
+                    var _code = '';
+                    for(var i=0;i<4;i++){
+                      var index =parseInt(Math.random()*str.length)
+                      _code +=str[index];
+                    }
+                    vcode.innerHTML = _code.toUpperCase();
+                    console.log(vcode);
+                  }    
+
 
 
                 // 验证用户名是否存在

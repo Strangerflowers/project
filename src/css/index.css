@@ -2,15 +2,210 @@
 * @Author: Marte
 * @Date:   2018-08-17 20:25:50
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-17 22:09:32
+* @Last Modified time: 2018-08-21 21:13:46
 */
-*{padding:0;margin:0;}
-.fl{float:left;}
-.fr{float:right;}
+/**{padding:0;margin:0;}*/
+/*.fl{float:left;}*/
+/*.fr{float:right;}*/
+body,html{height: 2000px;}
 li{list-style: none;}
 a{text-decoration:none;}
 .i_regin li{float:left;}
+#whole_top{width: 100%;height: 32px;background-color:#F7F7F7;border-bottom:1px solid #ccc;}
+.content{width: 1190px;margin:0 auto;}
+.tools{height: 32px;line-height:32px;font-size:14px;width: 1190px;margin:0 auto;background:#F7F7F7;}
+.newlist{display:none;width: 250px;height: 80px;border:1px solid #ccc;}
+.newlist li{float:left;padding:0 10px;width: 100px;height: 40px;background: #fff;}
+.newlist li a{width: 100px;height: 30px;position:absolute;}
+.top_left{height: 32px;float:left;}
+.information{height: 32px;padding-left:20px;padding-right:20px;}
+.information p{width: 200px;display: block;
+    float: left;height: 30px;}
 
-.tools{height: 32px;line-height:32px;font-size:14px;width: 1190px;margin:0 auto;background:#f00;}
-.newlist{display:none;}
+.nav{padding:0 10px;}
+.web_navigation{width: 84px;}
+.new{width: 30px;height: 30px;padding-left:10px;}
+.web_navigation:hover .newlist{display:block;color:#f00;}
+.web_navigation:hover .nav{color:#f00;background: #fff;border-bottom:1px solid #fff;}
+.web_navigation li:hover a{color:#f00;}
+.new:hover a{color:#f00;}
+.login li{margin:0 10px;}
 
+
+
+#header{width: 100%;height: 92px;}
+.header_content{width: 1190px;height: 92px;margin:0 auto;}
+.tab{float:left;}
+
+.header_l{padding:15px 0;}
+.header_l img{margin-right:20px;}
+.header_c{margin-top:25px;width: 516px;height: 67px;margin-left:50px;}
+.sousuo{width: 514px;height: 35px;border:1px solid #f00;background: #f00;}
+.sousuo input{width: 426px;height: 35px;border:1px solid #f00;}
+.sousuo span{width: 85px;height: 35px;background-color:red;color:#fff;font-size:16px;line-height:32px;padding-left:25px;}
+.tuijian{width: 490px;height: 28px;}
+.tuijian li{float:left;padding-left:10px;height: 28px;}
+.tuijian a{font-size:12px;line-height:28px;color:#9A9998;padding-right:10px;border-right:1px solid #ccc;}
+.tuijian li:hover a{color:#f00;border-bottom:1px solid #f00;}
+.header_r{float:right;margin-top:25px;}
+.header_r a{border:1px solid #D8D7D6;border-radius:5px;padding:5px 15px;color:#666666;font-size:14px;line-height:30px;}
+.header_r:hover a{color:#f00;border:1px solid #f00;}
+
+/*吸顶菜单*/
+            .top{width: 100%;background: #fff;height:60px;position:fixed;left:0;top:0;border-bottom:1px solid #fff;
+                  box-shadow:0 0 20px #ccc;
+                  z-index:1000; }
+            .s_top{width: 1090px;height: 50px;margin:0 auto;background:#FFFFFF;padding-top:10px;}
+            .stop_l{width: 100px;height: 60px;}
+            .s_top span{font-size:14px;line-height:16px;color:#636260;}
+            .s_top i{padding:0 32px 8px 10px;color:#636260;}
+            .s_top img{height: 49px;padding-right:76px;}
+            .stop_c{width: 514px;height: 35px;border:1px solid #f00;background: #f00;margin-left:50px;}
+            .stop_c input{width: 426px;height: 35px;border:1px solid #f00;}
+            .stop_c span{width: 85px;height: 35px;background-color:red;color:#fff;font-size:16px;line-height:32px;padding-left:25px;}
+          
+            .stop_r p{padding-left:10px;margin-right:10px;margin-top:5px;}
+            .stop_r a{color:#636260;}
+            .a1{border-right:1px solid #ccc;padding-right:10px;}
+            .msg:hover{background:#151515;color:#fff;}
+            .stop_r a:hover{color:#f00;}
+
+
+
+/*导航条*/           
+#nav{width: 100%;height: 35px;background: #f0fded;}
+.nav_content{width: 1190px;height: 35px;margin:0 auto;font-size:14px;line-height:35px;}
+.nav_l{position:relative;}
+.nav_leftfont{width: 190px;height: 35px;background-color:#151515;float:left;text-align:center;}
+
+.nav_leftfont a{display:block;color:#fff;}
+.show_nav{margin-top:35px;width: 190px;height: 410px;background: #4E3238;}
+.show_nav{position:absolute;text-align:left;font-size:14px;line-height:30px;padding:10px 0;}
+.show_nav li{padding-left:18px;}
+.show_nav a{color:#fff;}
+.show_nav  li a:hover {border-bottom:1px solid #fff;}
+.show_nav li:hover{background: #898989;}
+
+.nav_r{width: 1000px;height: 35px;}
+.nav_r li{float:left;width: 60px;padding:0 18px;}
+.nav_r a{color:#000;}
+.nav_r li:hover a{color:#EE585C;} 
+
+
+/*轮播图*/
+#banner_content{width: 100%;height: 430px;background: rgb(215,229,240);}
+.banner{width: 1190px;margin:0 auto;}
+/*ul{list-style: none;padding:0;margin:0;}*/
+.banner img{display: block;}
+.banner{position:relative;width:785px;height:430px;overflow:hidden;}
+.banner ul{position:absolute;overflow:hidden;}
+.banner ul li{float:left;}
+.banner .page{position:absolute;right:0;bottom:0;padding:10px;}
+.banner .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
+.banner .page span.active{background-color: rgba(255,0,0,.8);}
+
+.banner > span{display:none;position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:50px 16px;background-color: rgba(0,0,0,0.5);color:#fff;}
+.banner .btn-next{left:auto;right:0;}
+.banner > span:hover{background-color: rgba(255,0,0,0.8);}
+.banner:hover > span{display: block;}
+
+
+/*new_czt*/
+
+.new_czt{
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+    background: #fff;
+    overflow: hidden;}
+.czt_content{width: 1190px;margin:0 auto;height: 250px;}
+/*.czt_l{width: 224px;height: 240px;}*/
+.czt_l a{display:block;width: 224px;height: 240px;overflow:hidden;padding-bottom:10px;}
+.czt_r{width: 965px;height: 248px;border-top:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;
+}
+.czt_r li{float:left;width: 159px;border-right:1px dotted #ccc;margin-top:12px;height: 227px;}
+.czt_r li:nth-child(6){border-right:0px solid #fff;}
+.czt_r li:nth-child(12){border-right:0px solid #fff;}
+.czt_show{width: 140px;height: 227px;padding-left:10px;}
+.czt_r li img{width: 140px;height:140px;}
+.czt_name{line-height:20px; font-size:12px;color:#292929;margin-top:10px;}
+.czt_money{color:#f00;margin-top:20px;width: 140px;height: 45px;font-size:16px;line-height:20px;}
+.czt_compare{color:#C7C7C7;font-size:12px;line-height:20px;}
+.czt_r li a img:hover{transform: scale(1.1);}
+.czt_r li a:hover{border-bottom:1px solid #151515;}
+.czt_l img:hover{transform: scale(1.1);}
+
+
+
+
+/*tm_banner*/
+.new_tm{width: 100%;height: 370px;margin-bottom:20px;}
+.tm_content{width: 1190px;margin:0 auto;}
+.tm_content li{float:left;padding-left:7px;}
+.tm_banner{width: 305px;height: 370px;overflow:hidden;}
+.tm_banner img{width: 305px;height: 370px;}
+.tm_b1{display:block; width: 285px;height: 370px;}
+.tm_b1 a{display:block;width: 285px;height: 180px;overflow:hidden;}
+.tm_b1 img{display:block;width: 285px;height: 180px;} 
+.tm_b1 a:first-child{
+    margin-bottom:10px;
+}
+.tm_b11{width: 285px;height: 180px;}
+.tm_b1 img:hover{transform: scale(1.1);}
+
+
+
+/*生鲜果蔬*/
+#fruits{width: 100%;background:pink;height: 518px;}
+.f_content{width: 1190px;margin:0 auto;/*height: 518px;*/}
+h2{font-size:36px ;color:#000;line-height:48px;height: 50px;border:2px solid #fff;}
+.f_banner li{height: 464px;width: 306px;}
+.f_banner li a{display:block;float:left;height: 464px;width: 306px;}
+.f_banner{overflow:hidden;width: 306px;height: 464px;}
+.f_banner a img{display:block;width: 306px;height: 464px;}
+
+
+.c_top{width: 451px;height: 300px;}
+.c_bottom{width: 451px;height:160px;}
+
+
+
+
+
+
+
+/*食品酒饮*/
+/*.left_column{display:none;}*/
+.list{width: 100%;}
+.content{width: 1190px;margin:0 auto;/*position:relative;*/}
+#food{width: 100%;height: 464px;background: #ddd;}
+
+
+
+
+#fashion{width: 100%;height: 464px;background: #ccc;}
+
+
+#store{width: 100%;height: 464px;background: #666;}
+
+
+
+
+#clean{width: 100%;height: 464px;background: #999;}
+
+
+
+#toy{width: 100%;height: 464px;background: #a00;}
+
+
+
+#furniture{width: 100%;height: 464px;background: #0ff;}
+
+
+
+#digital{width: 100%;height: 464px;background: #00f;}
+
+
+
+.left_column{width: 50px;height: 449px;position:fixed;top:130px;left:100px;}
+.left_column a{width: 30px;height: 44px;display:block;background: #F3F3F3;color:#686763;font-size:12px;line-height: 18px;padding:0 10px;padding-top:5px;border-bottom:1px solid #ccc;}

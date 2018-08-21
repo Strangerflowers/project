@@ -1,0 +1,353 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .fl{float:left;}
+            .fr{float:right;}
+            *{padding:0;margin:0;}
+            body{height: 2000px;}
+            .top{width: 100%;background: #fff;}
+            .s_top{width: 1090px;height: 50px;margin:0 auto;background:#FFFFFF;padding-top:10px;}
+            .stop_l{width: 100px;height: 60px;}
+            .s_top span{font-size:14px;line-height:16px;color:#636260;}
+            .s_top i{padding:0 32px 8px 10px;color:#636260;}
+            .s_top img{height: 49px;padding-right:76px;}
+            .stop_c{width: 514px;height: 35px;border:1px solid #f00;background: #f00;margin-left:50px;}
+            .stop_c input{width: 426px;height: 35px;border:1px solid #f00;}
+            .stop_c span{width: 85px;height: 35px;background-color:red;color:#fff;font-size:16px;line-height:32px;padding-left:25px;}
+          
+            .stop_r p{padding-left:10px;margin-right:10px;}
+            .stop_r a{color:#636260;}
+            .a1{border-right:1px solid #ccc;padding-right:10px;}
+            .msg:hover{background:#151515;color:#fff;}
+            .stop_r a:hover{color:#f00;}
+            
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="s_top">
+                    <div class="stop_l fl ">
+                        <span>全部分类</span><br />
+                        <i class="msg"><></i> 
+                    </div>
+                    <img src="../img/logo-1.png" alt="" class="fl " />
+                     <div class="stop_c fl">
+                        <input type="search" name="search"/>
+                        <span>搜索</span>
+                    </div>
+                    <div class="stop_r fr ">
+                        <p class="fl"><a href="#" class="a1">登录</a></p>
+                        <p class="fl"><a href="#">注册</a></p>
+                    </div>
+               </div>
+        </div>
+    </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            ul{list-style: none;padding:0;margin:0;}
+            #banner img{display: block;}
+            #banner{position:relative;width:810px;height:320px;overflow:hidden;}
+            #banner ul{position:absolute;overflow:hidden;}
+            #banner ul li{float:left;}
+            #banner .page{position:absolute;right:0;bottom:0;padding:10px;}
+            #banner .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
+            #banner .page span.active{background-color: rgba(255,0,0,.8);}
+
+            #banner > span{display:none;position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:50px 16px;background-color: rgba(0,0,0,0.5);color:#fff;}
+            #banner .btn-next{left:auto;right:0;}
+            #banner > span:hover{background-color: rgba(255,0,0,0.8);}
+            #banner:hover > span{display: block;}
+        </style>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',()=>{
+            let banner=document.querySelector('#banner');
+            let ul=banner.children[0];
+
+            let index=0;
+
+            ul.appendChild(ul.children[0].cloneNode(true));
+
+            let len = ul.children.length;
+            ul.style.width=banner.clientWidth*len+'px';
+
+            // 添加分页
+            let page=document.createElement('div');
+            page.className = 'page';
+            for(let i=0;i<len-1;i++){
+                let span=document.createElement('span');
+                span.innerText=i+1;
+                if(i===index){
+                    span.className='active';
+                }
+                page.appendChild(span);
+            }
+            banner.appendChild(page);
+            // 添加上一张、下一张按钮
+            let btnNext =document.createElement('span');
+            btnNext.className='btn=next';
+            btnNext.innerHTML='&gt;';
+
+            let btnPrev=document.createElement('span');
+            btnPrev.className='btn-prev';
+            btnPrev.innerHTML='&lt';
+
+            banner.appendChild(btnPrev);
+            banner.appendChild(btnNext);
+
+            let timer=setInterval(autoPlay,3000);
+
+            banner.onmouseover=()=>{
+                clearInterval(timer);
+            }
+            banner.onmouseout=()=>{
+                timer=setInterval(autoPlay,3000);
+
+            }
+
+
+            banner.onclick=e=>{
+                if(e.target.parentNode.className==='page'){
+                    index=e.target.innerText-1;
+                    show();
+                }
+                else if(e.target.className==='btn-prev'){
+                    index--;
+                    show();
+                }else if(e.target.className==='btn-next'){
+                    index++;
+                    show();
+                }
+            }
+
+            function autoPlay(){
+                index++;
+                show();
+
+            }
+
+
+            // 封装函数
+            function show(){
+                if(index>=len){
+                    ul.style.left=0;
+                    index=1;
+                }else if(index<0){
+                    index=len-2;
+                }
+                animate(ul,{left:-index*banner.clientWidth});
+                for(let i=0;i<len-1;i++){
+                    page.children[i].className='';
+                }
+                if(index===len-1){
+                    page.children[0].className='active';
+                }else{
+                    page.children[index].className = 'active';
+                }
+            }
+        })
+        </script>
+    </head>
+    <body>
+       <div id="banner">
+        <ul>
+            <li><img src="../img/banner1.jpg"></li>
+            <li><img src="../img/banner2.jpg"></li>
+            <li><img src="../img/banner3.jpg"></li>
+            <li><img src="../img/banner4.jpg"></li>
+        </ul>
+    </div>
+    </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04滚动动轮播图</title>
+    <style>
+        ul{list-style: none;padding:0;margin:0;}
+        .banner img{display: block;width: 785px;height: 430px;position:absolute;left:50%;margin-left:-392px;}
+        .banner{position:relative;width:100%;height:430px;overflow:hidden;}
+        .banner ul{position:absolute;overflow:hidden;}
+        .banner ul li{float:left;height: 430px;width: 100%;}
+        .banner .page{position:absolute;right:0;bottom:0;padding:10px;}
+        .banner .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
+        .banner .page span.active{background-color: rgba(255,0,0,.8);}
+
+        .banner > span{display:none;position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:50px 16px;background-color: rgba(0,0,0,0.5);color:#fff;}
+        .banner .btn-next{left:auto;right:0;}
+        .banner > span:hover{background-color: rgba(255,0,0,0.8);}
+        .banner:hover > span{display: block;}
+
+        .yincang{
+            background: rgb(43, 41, 240);
+                position: absolute;
+                left: 0px;
+                visibility: hidden;
+                height: 430px;
+                opacity: 0.5;}
+
+        }
+        .xianshi{    
+            background: rgb(43, 41, 240);
+                position: absolute;
+                left: 0px;
+                visibility: visible;
+                height: 430px;
+                opacity:1;}
+    </style>
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+           
+            
+            let banner = document.getElementsByClassName('banner')[0];
+            let ul = banner.children[0];
+
+            // 初始化
+            let index = 0;
+
+            // 无缝滚动关键1：把第一张复制到最后
+            ul.appendChild(ul.children[0].cloneNode(true));
+
+            let len = ul.children.length;
+
+            // 设置ul宽度，实现水平排列效果
+            ul.style.width = banner.clientWidth * len + 'px';
+
+            // 添加分页
+            let page = document.createElement('div');
+            page.className = 'page';
+            for(let i=0;i<len-1;i++){
+                let span = document.createElement('span');
+                span.innerText = i+1;
+                if(i===index){
+                    span.className = 'active';
+                }
+
+                page.appendChild(span);
+            }
+            banner.appendChild(page);
+
+
+            // 添加上一张、下一张按钮
+            let btnNext = document.createElement('span');
+            btnNext.className = 'btn-next';
+            btnNext.innerHTML = '&gt;';
+
+            let btnPrev = document.createElement('span');
+            btnPrev.className = 'btn-prev';
+            btnPrev.innerHTML = '&lt;';
+
+            banner.appendChild(btnPrev);
+            banner.appendChild(btnNext);
+
+
+            let timer = setInterval(autoPlay,3000);
+
+
+            // 鼠标移入移除
+            banner.onmouseover = ()=>{
+                clearInterval(timer);
+            }
+
+            banner.onmouseout = ()=>{
+                timer = setInterval(autoPlay,3000);
+
+            }
+
+            banner.onclick = e=>{
+                // 点击分页切换
+                if(e.target.parentNode.className === 'page'){
+                    // 修改index值为当前分页数字-1
+                    index = e.target.innerText-1;
+
+                    show();
+                }
+
+                // 上一张，下一张
+                else if(e.target.className === 'btn-prev'){
+                    index--;
+                    show();
+                }else if(e.target.className === 'btn-next'){
+                    index++;
+                    show();
+                }
+            }
+
+
+            function autoPlay(){
+                index++;
+
+                show();
+            }
+
+
+            function show(){
+                if(index>=len){
+                    // 无缝滚动关键2：当滚动到复制那张图片时，瞬间重置回初始状态，并把index改成1
+                    ul.style.left = 0;
+                    index = 1;
+                }else if(index<0){
+                    index = len-2;
+                }
+
+                animate(ul,{left:-index*banner.clientWidth});
+
+                for(let i=0;i<len-1;i++){
+                    page.children[i].className = ''
+                }
+
+                if(index===len-1){
+                    page.children[0].className = 'active';
+                }else{
+                    page.children[index].className = 'active';
+                    
+                }
+            }
+        })
+            
+    </script>
+</head>
+<body>
+    <div class="ba">
+        <div class="banner">
+             <ul>
+                <li class="b1"><img src="../img/banner2.jpg"></li>
+                <li class="b2"><img src="../img/banner1.jpg"></li>
+                <li class="b3"><img src="../img/banner3.jpg"></li>
+                <li class="b4"><img src="../img/banner4.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
