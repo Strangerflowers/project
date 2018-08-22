@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-20 18:56:17
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-21 19:58:36
+* @Last Modified time: 2018-08-22 20:38:45
 */
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded',function(){
                                 <span>搜索</span>
                             </div>
                             <div class="stop_r fr ">
-                                <p class="fl"><a href="#" class="a1">登录</a></p>
-                                <p class="fl"><a href="#">注册</a></p>
+                                <p class="fl"><a href="html/login.html" class="a1">登录</a></p>
+                                <p class="fl"><a href="html/register.html">注册</a></p>
                             </div>
                         </div>
                     </div>
@@ -165,6 +165,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
             // 左边栏
             
-
+          
 
 });

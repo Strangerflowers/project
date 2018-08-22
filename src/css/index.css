@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-17 20:25:50
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-21 21:13:46
+* @Last Modified time: 2018-08-22 18:02:07
 */
 /**{padding:0;margin:0;}*/
 /*.fl{float:left;}*/
@@ -23,9 +23,15 @@ a{text-decoration:none;}
     float: left;height: 30px;}
 
 .nav{padding:0 10px;}
-.web_navigation{width: 84px;}
+.web_navigation{width: 84px; position: relative;}
+.web_navigation .naviga_list { position:absolute; top: 33px; width: 200px;    background-color: #ccc; background: #fff;border:1px solid #fff; }
+.naviga_list{display:none;}
+.web_navigation .naviga_list .aaaa{width: 180px;}
+.web_navigation .naviga_list .aaaa span:nth-child(1){ float: left; }
+.web_navigation .naviga_list .aaaa span:nth-child(2){ float: right; }
 .new{width: 30px;height: 30px;padding-left:10px;}
-.web_navigation:hover .newlist{display:block;color:#f00;}
+.web_navigation:hover .naviga_list{display:block;}
+.naviga_list  span:hover{color:#f00;}
 .web_navigation:hover .nav{color:#f00;background: #fff;border-bottom:1px solid #fff;}
 .web_navigation li:hover a{color:#f00;}
 .new:hover a{color:#f00;}
@@ -157,19 +163,44 @@ a{text-decoration:none;}
 
 /*生鲜果蔬*/
 #fruits{width: 100%;background:pink;height: 518px;}
-.f_content{width: 1190px;margin:0 auto;/*height: 518px;*/}
-h2{font-size:36px ;color:#000;line-height:48px;height: 50px;border:2px solid #fff;}
-.f_banner li{height: 464px;width: 306px;}
+.f_content{width: 1190px;margin:0 auto;height: 518px;}
+h2{font-size:36px;color:#000;line-height:48px;height: 50px;border:2px solid #fff;}
+
+/*.f_banner li{display:inline;height: 464px;width: 306px;float:left;}
 .f_banner li a{display:block;float:left;height: 464px;width: 306px;}
-.f_banner{overflow:hidden;width: 306px;height: 464px;}
+.f_banner{margin:0;width: 306px;height: 464px;overflow:hidden;}
 .f_banner a img{display:block;width: 306px;height: 464px;}
 
 
 .c_top{width: 451px;height: 300px;}
-.c_bottom{width: 451px;height:160px;}
+.c_bottom{width: 451px;height:160px;}*/
+.f_banner{    
+    width: 306px;
+    height: 464px;
+    overflow: hidden;
+    float: left;background: #00f;}
+.fruits_r{   
+    width: 883px;
+    height: 461px;
+    float: right;
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
+    background: #fff;
+}
+.c_top{    
+    height: 300px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    overflow: hidden;
+    position: relative;}
+.c_bottom{  height: 160px; position: relative;background: #0f0;}
 
-
-
+.top_l{width: 450px;height: 300px;}
+.top_c{width: 230px;height: 300px;}
 
 
 
