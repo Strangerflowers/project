@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-20 18:56:17
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-22 20:38:45
+* @Last Modified time: 2018-08-23 15:52:11
 */
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -163,8 +163,106 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
+
+            var topd=document.querySelector('.topd');
+            var whole_top = document.querySelector('#whole_top');
+            var header = document.querySelector('#header');
+            var nav = document.querySelector('#nav');
+            var banner_content = document.querySelector('#banner_content');
+            var new_czt = document.querySelector('.new_czt');
+            var new_tm = document.querySelector('.new_tm');
+
             // 左边栏
+            var column=document.querySelector('.left_column');
+            column.style.display='none';
+            window.onscroll=function(){
+        var scrollY = window.scrollY;
+        if(scrollY>=(whole_top.offsetHeight+header.offsetHeight+nav.offsetHeight+banner_content.offsetHeight+new_czt.offsetHeight+new_tm.offsetHeight)){
+                column.style.display='block';
+       
+        }else{
             
+            column.style.display='none';
+            console.log(555);
+            
+        }
+    
+    }
+
+    // 置顶按钮
+        var toTop = document.querySelector('#toTop');
+    // 点击返回顶部
+    toTop.onclick = function () {
+        var timer = setInterval(function () {
+            var speed = Math.ceil(window.scrollY / 5);
+            scrollBy(0, -speed);
+            if (window.scrollY <= 0) {
+                clearInterval(timer);
+            }
+        }, 30)
+    }
+
+
+
+
+// 首页
+var goodslist=document.querySelector('.goodslist')
+var xhr = new XMLHttpRequest();//readyState=0
+            
+            xhr.onreadystatechange = function(){
+                // console.log(xhr.readyState)
+                if(xhr.readyState === 4){
+                    // 确认数据接收完毕
+                    // 在次获取数据：responseText
+                    var data = JSON.parse(xhr.responseText);
+                    goodslist.innerHTML = data.map(function(item){
+                        // return `
+                        //      <li>
+                        //     <a href="#"><img src="${item.img}" alt="" /></a>
+                        //     <p>${item.name}</p>
+                        //     <p class="price">￥：<span>${item.price}</span></p>
+
+                        //     <p class="sale"><del>￥：${item.sale}</del></p>
+                            
+                        //     </li>
+                        //     `
+                        //     
+                            
+                        return ` 
+                            <ul>
+                                <li data-guid="${item.id}">
+                                    <a href="#">
+                                        <img src="${item.img}" alt="" />
+                                    </a>
+                                    <p>
+                                        <a href="#"> ${item.name}</a>
+                                    </p>
+                                    <p class="jiagelan">
+                                        <span class="symbal">￥</span>
+                                        <span class="sale">${item.sale}</span>
+                                            
+                                        <span class="shoucang">
+                                            <a href="#">收藏</a>
+                                        </span>
+                                    </p>
+                                        
+                                </li>
+                            </ul>
+                        
+                        `
+
+                    }).join('')
+
+                }
+            }
+
+            // 配置参数，建立与服务器连接
+            xhr.open('get','../api/home_list.php',true);//readyState=1
+
+            // 发起请求
+            xhr.send();//readyState=2
+            // console.log(xhr);
+
           
 
 });

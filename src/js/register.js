@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-18 11:44:58
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-22 16:28:19
+* @Last Modified time: 2018-08-23 00:49:16
 */
 
  document.addEventListener('DOMContentLoaded',()=>{
@@ -14,14 +14,20 @@
             let email       =  document.querySelector('#email');
             let phone       =  document.querySelector('#phone');
             var code        =  document.querySelector('#code');
+            var scode        =  document.querySelector('#s_code');
             let status      =  [200,304];
             let isok        =  false;
+            var random  =  document.querySelector('.random');
+            var vcode    =  document.querySelector('#vcode');
 
-          
+            var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            var _yzcode = '';//得到字符串
 
+            randomCode();
         //
             // 注册
             btn.onclick=function(){
+                console.log('==========')
                 if(!isok){
                     return false;
                 }
@@ -33,12 +39,10 @@
                 var _email=email.value;
                 var _phone=phone.value;
                 var _code=code.value;     //得到字符串
-                var _yzcode = '';//得到字符串
-
+                var _scode=scode.value;
+    
                 
           
-                // console.log("code=",_code);
-                // console.log("vcode=",vcode);
                         // 验证用户名
                        if(!/^[a-z][\w\-]{5,19}$/.test(_username)){
                         alert('您输入的用户名不合法');
@@ -74,16 +78,18 @@
                          }
                         
 
-                        // if(!(_yzcode===_code)){
-                        //     alert('验证码有误');
-                        //     return false;
-                        // }
+                        if(_yzcode != _code){
+                            console.log('yzcode', _yzcode)
+                            console.log('_code', _code)
+                            alert('验证码有误');
+                            return false;
+                        }
 
-                        // 短信验证码
-                        //  if(!/^\S{4}$/.test(_password)){
-                        //     alert('短信验证码有误');
-                        //     return false;  
-                        // }
+                        //短信验证码
+                         if(!/^\S{4}$/.test(_scode)){
+                            alert('短信验证码有误');
+                            return false;  
+                        }
                        
                          if(!checkbox.checked){
                                  
@@ -111,15 +117,12 @@
            
 
                         // 随机生成验证码
-                 var random  =  document.querySelector('.random');
-                 var vcode    =  document.querySelector('#vcode');
-
-                  var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                
                   random.onclick=function(){
                     // console.log(666);
                     randomCode();
                   }   
-                  randomCode();
+                  
 
                   // 封装函数生成随机数字或字母
                   function randomCode(){

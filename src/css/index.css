@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-17 20:25:50
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-22 18:02:07
+* @Last Modified time: 2018-08-23 20:07:39
 */
 /**{padding:0;margin:0;}*/
 /*.fl{float:left;}*/
@@ -162,7 +162,7 @@ a{text-decoration:none;}
 
 
 /*生鲜果蔬*/
-#fruits{width: 100%;background:pink;height: 518px;}
+#fruits{width: 100%;height: 518px;}
 .f_content{width: 1190px;margin:0 auto;height: 518px;}
 h2{font-size:36px;color:#000;line-height:48px;height: 50px;border:2px solid #fff;}
 
@@ -178,29 +178,36 @@ h2{font-size:36px;color:#000;line-height:48px;height: 50px;border:2px solid #fff
     width: 306px;
     height: 464px;
     overflow: hidden;
-    float: left;background: #00f;}
+    float: left;}
+    .f_banner img{width: 306px;height: 464px;}
 .fruits_r{   
     width: 883px;
     height: 461px;
     float: right;
+    background-color: #fff;
     border-top-width: 2px;
     border-bottom-width: 1px;
     border-top-style: solid;
     border-bottom-style: solid;
     border-right-width: 1px;
     border-right-style: solid;
-    background: #fff;
+    
 }
 .c_top{    
     height: 300px;
+    width: 883px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     overflow: hidden;
     position: relative;}
-.c_bottom{  height: 160px; position: relative;background: #0f0;}
-
+.c_bottom{  background-color: #fff; width: 883px; height: 140px; position: relative;}
+.c_bottom img{ width: 217px; height: 140px;}
+.c_top div {float: left;border-left:1px solid #ccc;}
+/*.c_top img {display: inline-block; float: left;}*/
 .top_l{width: 450px;height: 300px;}
-.top_c{width: 230px;height: 300px;}
+.top_c img{width: 230px;height: 300px;}
+.top_r img{width: 200px;height: 300px;}
+.top_c,.top_r{}
 
 
 
@@ -209,34 +216,90 @@ h2{font-size:36px;color:#000;line-height:48px;height: 50px;border:2px solid #fff
 /*.left_column{display:none;}*/
 .list{width: 100%;}
 .content{width: 1190px;margin:0 auto;/*position:relative;*/}
-#food{width: 100%;height: 464px;background: #ddd;}
+#food{width: 100%;height: 518px;padding-top:30px;}
 
 
 
 
-#fashion{width: 100%;height: 464px;background: #ccc;}
+#fashion{width: 100%;height: 518px;padding-top:30px;}
 
 
-#store{width: 100%;height: 464px;background: #666;}
-
-
-
-
-#clean{width: 100%;height: 464px;background: #999;}
+#store{width: 100%;height: 518px;padding-top:30px;}
 
 
 
-#toy{width: 100%;height: 464px;background: #a00;}
+
+#clean{width: 100%;height: 518px;padding-top:30px;}
 
 
 
-#furniture{width: 100%;height: 464px;background: #0ff;}
+#toy{width: 100%;height: 518px;padding-top:30px;}
 
 
 
-#digital{width: 100%;height: 464px;background: #00f;}
+#furniture{width: 100%;height: 518px;padding-top:30px;}
+
+
+
+#digital{width: 100%;height: 518px;padding-top:30px;}
 
 
 
 .left_column{width: 50px;height: 449px;position:fixed;top:130px;left:100px;}
 .left_column a{width: 30px;height: 44px;display:block;background: #F3F3F3;color:#686763;font-size:12px;line-height: 18px;padding:0 10px;padding-top:5px;border-bottom:1px solid #ccc;}
+
+
+.you_like{width: 1190px;height: 100px;line-height:49px;margin:0 auto;}
+.you_bottom{height:24px;border-bottom:1px solid #ddd;text-align:center;line-height:49px;padding-top:10px;}
+.you_like .you_bottom span:first-of-type{color:#151515;font-size:26px;line-height:49px;}
+.you_like .you_bottom span{background: #fff;color:#999;padding:0 15px;line-height:49px;}
+.you_like_bottom{float:right;margin-top:20px;}
+.you_like_bottom p{color:#999;font-size:14px;line-height:40px;}
+.you_like_bottom p a{color:#F57C8D;font-size:14px;line-height:40px;}
+
+/*列表的样式*/
+/* .goodslist{width: 1190px;}
+.goodslist li{width: 230px;height: 340px;margin:0 5px;border:1px solid #ccc;float:left;}
+.goodslist li img{width: 220px;height: 220px;margin:4px;}
+.goodslist li p{width: 216px;height: 42px;margin-top:2px;padding:0 11px;font-size:14px;line-height:21px;margin-bottom:15px;}
+.goodslist li p a{color:#676767;}
+.goodslist li .jiagelan{width: 216px;margin-top:10px;}
+.goodslist li .sale{color:#f00;width: 32px;height: 21px;}
+.goodslist li .symbal{font-size:12px ;line-height:16px;color:#f00;width: 12px;height: 16px;margin-left:11px;}
+.goodslist li .shoucang a{width: 42px;height: 33px;color:#8D8F84;margin-left:70px;border:1px solid #ccc;padding:5px 8px 5px 30px;border-radius:20px;}
+.goodslist li:hover{box-shadow:0 0  5px #999;}
+.goodslist li p:hover a{border-bottom:1px solid #999;}
+.goodslist li span:hover a{color:#f00;}*/
+
+
+
+.goodslist{width: 1190px;margin:0 auto;height: 2110px;}
+.goodslist li{width: 225px;height: 340px;margin:5px 5px;border:1px solid #ccc;float:left;}
+.goodslist li img{width: 200px;height: 220px;margin:4px;}
+.goodslist li p{width: 200px;height: 42px;margin-top:2px;padding:0 11px;font-size:14px;line-height:21px;margin-bottom:15px;/*overflow:hidden;*/}
+.goodslist li .jiagelan{width: 200px;margin-top:30px;}
+.goodslist li p a{color:#676767;}
+.goodslist li .sale{color:#f00;width: 32px;height: 21px;}
+.goodslist li .symbal{font-size:12px ;line-height:16px;color:#f00;width: 12px;height: 16px;margin-left:11px;}
+.goodslist li .shoucang a{width: 72px;height: 33px;color:#8D8F84;margin-left:60px;border:1px solid #ccc;padding:5px 8px 5px 30px;border-radius:20px;}
+.goodslist li:hover{box-shadow:0 0  5px #999;}
+.goodslist li p:hover a{border-bottom:1px solid #999;}
+.goodslist li span:hover a{color:#f00;}
+
+
+/*底部样式*/
+.footer{width: 100%;background: #F3F3F3;margin-top:50px;}
+.bottom{width: 1190px;height: 167px;padding:24px 155px;margin:0 auto;}
+.bottom>ul>li{float:left;width: 200px;padding-left:30px;}
+.bottom>ul>li span{width: 200px;font-size:18px;color:#000;height: 40px;line-height:40px;}
+.bottom>ul>li ul li a{font-size:16px;line-height:24px;color:#545454;}
+.bottom_nav{width: 1190px;margin:0 auto;}
+.bottom_1{height: 24px;width: 100%;text-align: center;font-size:12px;line-height:24px;padding-left:420px;}
+.bottom_1 li{float:left;padding-right:10px;}
+.bottom_1 li a{color:#323232;padding-right:10px;}
+
+.bottom_3,.bottom_5,.bottom_4,.bottom_2{width: 100%;height: 24px;font-size:14px;line-height:24px;text-align:center;margin-top:10px;/*padding:0 40px;*/}
+.bottom_2 a,.bottom_3 a,.bottom_4 a,.bottom_5 a{color:#666666;}
+.bottom_2{color:#999999;}
+.bottom_5 img{width: 20px;height: 20px;padding:0 10px;}
+
